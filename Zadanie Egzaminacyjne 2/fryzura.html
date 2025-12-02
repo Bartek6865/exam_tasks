@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fryzjerstwo</title>
+    <link rel="stylesheet" href="styl8.css">
+</head>
+<body>
+    <div class="lewy1">
+        <h1><a href="index.html">SALON FRYZJERSKI</a></h1>
+    </div>
+    <div class="prawy1">
+        <h4><a href="fryzura.html">Ceny strzyzenia</a></h4>
+        <table>
+            <tr>
+                <th>Dlugosc wlosow</th>
+                <th>Cena</th>
+            </tr>
+            <tr>
+                <td>krotkie</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>srednie</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>poldlugie</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>dlugie</td>
+                <td>50</td>
+            </tr>
+        </table>
+    </div>
+    <div class="lewy2">
+        <h2>PROMOCJA!</h2>
+        <input type="radio" name="radio" value="25" id="radio1">Krotkie<br>
+        <input type="radio" name="radio" value="30" id="radio2">Srednie<br>
+        <input type="radio" name="radio" value="40" id="radio3">Polkrotkie<br>
+        <input type="radio" name="radio" value="50" id="radio4">Dlugie<br>
+        <button onclick="Promocja()">Odkryj promocje!</button>
+        <p id="cena"></p>
+    </div>
+    <div class="lewy3">
+        <p>Witaj! Milo nam, ze odwiedziles nasz salon. Sprawdz promocje!</p>
+        <h4>Kontakt: 444 555 666</h4>
+    </div>
+    
+    <div class="prawy2">
+        <img src="obraz1.jpg" alt="Fryzjerka">
+    </div>
+    <footer>
+        <p>Autor:00000000000</p>
+    </footer>
+    <script>
+        
+    function Promocja() 
+    {
+        let cena;
+
+        if (document.getElementById('radio1').checked) 
+        {
+            cena = 15;
+        } 
+        else if (document.getElementById('radio2').checked) 
+        {
+            cena = 20;
+        } 
+        else if (document.getElementById('radio3').checked) 
+        {
+            cena = 30;
+        } 
+        else if (document.getElementById('radio4').checked) 
+        {
+            cena = 40;
+        } 
+        else 
+        {
+            cena = "Nie wybrano opcji";
+        }
+        
+        let paragraf = document.getElementById('cena');
+        paragraf.innerHTML = "Cena promocyjna: " + cena;
+    }
+    </script>
+</body>
+</html>

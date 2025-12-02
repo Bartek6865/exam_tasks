@@ -1,0 +1,62 @@
+body {
+    font-family: Garamond;
+    text-align: center;
+    margin: 0;
+}
+
+.lewy1, .lewy2, .lewy3 {
+    width: 68%;        /* trochę mniejsze niż 70%, żeby zmieściło się z prawą kolumną */
+    float: left;
+}
+
+.lewy1 {
+    background-color: #795548;
+    font-size: 170%;
+}
+
+.lewy2 {
+    height: 400px;
+}
+
+.prawy1, .prawy2 {
+    background-color: #bcaaa4;
+    color: #795548;
+    width: 28%;
+    float: right;
+    height: 400px;
+}
+
+footer {
+    background-color: #795548;
+    color: white;
+    padding: 20px;
+    clear: both;      /* stopka zawsze poniżej floatów */
+}
+
+table {
+    margin: auto;
+    width: 80%;
+    border: solid 1px #795548;
+}
+
+tr:hover {
+    background-color: sienna;
+    color: white;
+}
+
+h4 {
+    font-size: 200%;
+}
+
+img {
+    padding: 20px;
+    border-radius: 40px;
+}
+
+a {
+    color: white;
+}
+
+#radio1, #radio2, #radio3, #radio4 {
+    margin: 7px;
+}
