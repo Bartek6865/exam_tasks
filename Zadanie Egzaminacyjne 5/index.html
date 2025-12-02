@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <div id="blok_boczny">
+        <img src="obraz1.jpg" alt="Promocje">
+        <h2>Sprawdz promocje</h2>
+        <table>
+            <tr>
+                <th>Co?</th>
+                <th>ile taniej?</th>
+            </tr>
+            <tr>
+                <td>ubrania</td>
+                <td>15%</td>
+            </tr>
+            <tr>
+                <td>buty</td>
+                <td>25%</td>
+            </tr>
+        </table>
+    </div>
+    <div id="banner">
+        <h1>Zarejestruj sie w sklepie</h1>
+    </div>
+    <main>
+        <button id="klient" onclick="kontrolki1()">Klient</button>
+        <button id="adres" onclick="kontrolki2()">Adres</button>
+        <button id="kontakt" onclick="kontrolki3()">Kontakt</button>
+        <div id="kontrolki1">
+            Imie<br><input type="text" id="imie" placeholder="Wpisz dane..."><br>
+            Nazwisko<br><input type="text" id="nazwisko"><br>
+            Data<br><input type="date" id="data"><br>
+        </div>
+        <div id="kontrolki2">
+            Ulica<br><input type="text" id="ulica"><br>
+            Numer<br><input type="number" id="numer"><br>
+            Miasto<br><input type="text" id="miasto"><br>
+        </div>
+        <div id="kontrolki3">
+            Numer komorkowy<br><input type="text" id="numer_tel"><br>
+            <input type="checkbox" id="rodo">Akceptuje RODO<br>
+            <button onclick="funkcja1()">Zatwierdz dane</button>
+        </div>
+    </main>
+    <div id="pasek_postepu">
+
+    </div>
+    <footer>
+        <h4>Wykonal:00000000000</h4>
+    </footer>
+    <script>
+    
+        function kontrolki1()
+        {
+            document.getElementById("kontrolki1").style.display = "block"; 
+            document.getElementById("kontrolki2").style.display = "none";  
+            document.getElementById("kontrolki3").style.display = "none";  
+        }
+
+        function kontrolki2()
+        {
+            document.getElementById("kontrolki1").style.display = "none";  
+            document.getElementById("kontrolki2").style.display = "block"; 
+            document.getElementById("kontrolki3").style.display = "none";  
+        }
+
+        function kontrolki3()
+        {
+            document.getElementById("kontrolki1").style.display = "none";  
+            document.getElementById("kontrolki2").style.display = "none";  
+            document.getElementById("kontrolki3").style.display = "block"; 
+        }
+
+        
+    </script>
+</body>
+</html>

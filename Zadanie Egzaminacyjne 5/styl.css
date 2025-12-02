@@ -1,0 +1,87 @@
+* {
+    font-family: Cambria;
+}
+
+body {
+    background-color: Linen;
+}
+
+#blok_boczny, banner, footer {
+    background-color: SteelBlue;
+    color: white;
+    text-align: center;
+}
+
+#blok_boczny {
+    width: 25%;
+    height: 510px;
+    margin: 0 1% 0 1%;
+    float: left;
+    box-shadow: 4px 4px 5px DimGray;
+}
+
+#banner {
+    width: 73%;
+    height: 80px;
+    float: right;
+}
+
+main {
+    width: 73%;
+    height: 400px;
+    float: right;
+}
+
+button {
+    background-color: SteelBlue;
+    color: white;
+    width: 20%;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 130%;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: Navy;
+}
+
+#kontrolki1, #kontrolki2, #kontrolki3 {
+    background-color: LightBlue;
+    padding: 10px;
+    margin-right: 80px;
+}
+
+#kontrolki2, #kontrolki3 {
+    display: none;
+}
+
+#pasek_postepu {
+    background-color: LightGrey;
+    width: 73%;
+    height: 30px;
+    margin-bottom: 10px;
+    float: right;
+    clear: both;
+    padding-left: 4%;
+    box-sizing: border-box;
+}
+
+#pasek_postepu::after {
+    content: "";
+    display: block;
+    background-color: Navy;
+    width: 4%;
+    height: 30px;
+}
+
+#blok_boczny table {
+    width: 100%;
+    border: 1px dotted Navy;
+    border-collapse: collapse;
+}
+
+#blok_boczny table th, #blok_boczny table td {
+    border: 1px dotted Navy;
+}
