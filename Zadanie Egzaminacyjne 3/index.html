@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header id="banner">
+        <h2>Efekty na obrazach</h2>
+    </header>
+    <div class="lewy">
+        <img src="pszczola.jpg" alt="Pszczola na fioletowym kwiatku" id="pszczola"><br>
+        <input type="radio" name="radio" id="blur">Blur<br>
+        <input type="radio" name="radio" id="sepia">Sepia<br>
+        <input type="radio" name="radio" id="negatyw">Negatyw<br>
+        <button type="submit" onclick="blur_sepia_negatyw()">Zastosuj</button>
+    </div>
+    <div class="prawy">
+        <img src="pomarancza.jpg" alt="drzewo pomaranczy" id="pomarancz"><br>
+        <button id="kolor" onclick="kolorowy()">Kolorowy</button>
+        <button id="bez_koloru" onclick="czarno_bialy()">Czarno bialy</button>
+    </div>
+    <div class="lewy">
+        <img src="owoce.jpg" alt="Kosz pelen owocow" id="owoce"><br>
+        <input type="range" id="suwak100" min="0" max="100" value="100"><br>
+        <button type="submit" onclick="widocznosc()">Zastosuj</button>
+    </div>
+    <div class="prawy">
+        <img src="zolw.jpg" alt="zolw w wodzie" id="zolw"><br>
+        <input type="range" id="suwak250" min="0" max="250"><br>
+        <button type="submit" onclick="kontrast()">Zastosuj</button>
+        
+    </div>
+    <footer>
+       <p><a href="http://www.css.com/">Zobacz inne efekty</a></p> <br>
+       <p>Strone wykonal:00000000000</p>
+    </footer>
+    <script>
+        function blur_sepia_negatyw()
+        {
+            if(document.getElementById("blur").checked)
+            {
+                let img = document.getElementById("pszczola");
+                img.style.filter = "blur(5px)";
+            }
+            if(document.getElementById("sepia").checked)
+            {
+                let img = document.getElementById("pszczola");
+                img.style.filter = "sepia(100%)";
+            }
+            if(document.getElementById("negatyw").checked)
+            {
+                let img = document.getElementById("pszczola");
+                img.style.filter = "invert(100%)";
+            }
+        }
+        function kolorowy()
+        {
+            let img = document.getElementById("pomarancz");
+            img.style.filter = "none";
+        }
+        function czarno_bialy()
+        {
+            let img = document.getElementById("pomarancz");
+            img.style.filter = "grayscale(100%)";
+        }
+        function widocznosc()
+        {
+            let wartosc = document.getElementById("suwak100").value;
+            let img = document.getElementById("owoce");
+            img.style.filter = "opacity(" + wartosc + "%)"
+        }
+        function kontrast()
+        {
+            let wartosc = document.getElementById("suwak250").value;
+            let img = document.getElementById("zolw");
+            img.style.filter = "brightness(" + wartosc + "%)"
+        }
+
+    </script>
+</body>
+</html>
